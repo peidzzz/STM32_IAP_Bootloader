@@ -28,7 +28,7 @@
 //#define IAP_FLASH_FLAG_ADDR   0x8002800
 
 #if (USE_BKP_SAVE_FLAG == 1)
-  #define INIT_FLAG_DATA      0x0000  //默认标志的数据(空片子的情况)
+  #define INIT_FLAG_DATA      0x0000   //默认标志的数据(空片子的情况)
 #else
   #define INIT_FLAG_DATA      0xFFFF   //默认标志的数据(空片子的情况)
 #endif

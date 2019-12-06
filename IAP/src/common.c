@@ -84,6 +84,9 @@ void STM_EVAL_COMInit(USART_InitTypeDef* USART_InitStruct)
 
     /* Enable USART */
     USART_Cmd(EVAL_COM1, ENABLE);
+		
+		USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+		USART_ClearFlag(USART1, USART_FLAG_TC);
 }
 
 
@@ -341,8 +344,7 @@ void GetInputString (uint8_t * buffP)
             buffP[bytes_read++] = c;
             //SerialPutChar(c);
         }
-    }
-    while (1);
+    }while (1);
     SerialPutString(("\r\n"));
     buffP[bytes_read-1] = '\0';
 }

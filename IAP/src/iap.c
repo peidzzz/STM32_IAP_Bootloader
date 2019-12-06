@@ -172,7 +172,6 @@ void IAP_Main_Menu(void)
         {
             SerialPutString(" diswp\r\n");
         }
-
         GetInputString(cmdStr);
 
         if(strcmp((char *)cmdStr, CMD_UPDATE_STR) == 0)
